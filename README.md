@@ -1,6 +1,18 @@
+# my shell setting
+
+1. Setup on my zsh
+
+   `$ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
+
+2. theme setting
+   
+   edit ~/.zshrc ZSH_THEME="xxx"
+   suggest: [`agnoster`, `ys`, `dieter`, `jonathan`, `obraun`, `re5et`, `rkj`, `amuse`]
+
+
 # my vim setting
 
-1. Set up [Vundle](https://github.com/VundleVim/Vundle.vim):
+1. Setup [Vundle](https://github.com/VundleVim/Vundle.vim):
 
    `$ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
 

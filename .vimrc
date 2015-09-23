@@ -31,7 +31,6 @@ Plugin 'scrooloose/syntastic'
 Plugin 'TagHighlight'
 Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'SuperTab'
-Plugin 'xptemplate'
 Bundle 'tpope/vim-surround'
 Plugin 'https://github.com/terryma/vim-multiple-cursors.git'
 

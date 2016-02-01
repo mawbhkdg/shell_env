@@ -7,7 +7,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'bling/vim-airline'
+"Plugin 'bling/vim-airline'
 Plugin 'funorpain/vim-cpplint'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'majutsushi/tagbar'
@@ -22,7 +22,7 @@ Plugin 'tpope/vim-markdown'
 Plugin 'Markdown'
 Plugin 'Markdown-syntax'
 Plugin 'uarun/vim-protobuf'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 'AutoClose'
 Bundle 'Lokaltog/vim-powerline'
 Plugin '_jsbeautify'

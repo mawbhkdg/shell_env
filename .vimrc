@@ -6,7 +6,7 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'altercation/vim-colors-solarized'
+"Plugin 'altercation/vim-colors-solarized'
 "Plugin 'bling/vim-airline'
 Plugin 'funorpain/vim-cpplint'
 Plugin 'gmarik/Vundle.vim'
@@ -16,7 +16,6 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'shougo/unite.vim'
 Plugin 'shougo/vimproc.vim'
 Plugin 'shougo/vimshell.vim'
-Plugin 'sprsquish/thrift.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-markdown'
 Plugin 'Markdown'

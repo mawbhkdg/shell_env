@@ -76,3 +76,7 @@
    or `:BundleInstall`
 
    To install from command line: `vim +PluginInstall +qall`
+
+4. Vim Scripts List:
+   
+   http://vim-scripts.org/vim/scripts.html

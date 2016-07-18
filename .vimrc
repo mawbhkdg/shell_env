@@ -248,7 +248,10 @@ autocmd BufReadPost *
 
         " 将Tab键更改为空格
         set expandtab
-    
+        
+        " 编辑模式的时候按退格键的时候退回缩进的长度,当使用 expandtab 时特别有用
+        set softtabstop=4
+        
         " 显示tab和空格
         set list
         " 设置tab和空格样式

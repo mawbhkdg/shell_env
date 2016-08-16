@@ -268,21 +268,16 @@ autocmd BufReadPost *
 "let g:multi_cursor_skip_key='<C-x>'
 "let g:multi_cursor_quit_key='<Esc>'
 
-"set statusline=
-"set statusline+=%1*%-52F\
-"set statusline+=%2*\ %{&ff=='unix'?'\\n':(&ff=='mac'?'\\r':'\\r\\n')}\
-"set statusline+=%3*\ %{&fenc!=''?&fenc:&enc}\
-"set statusline+=%1*\ %Y\
-"set statusline+=%4*\ %04l/%03c\
-"set statusline+=%2*\ 0x%04.4B\
-"set statusline+=%1*\ %-16{strftime(\"%Y-%m-%d\ %H:%M\")}\
-"set statusline+=%5*\ %-3m\
-"hi User1 ctermfg=blue ctermbg=yellow cterm=None
-"hi User2 ctermfg=blue ctermbg=yellow cterm=None
-"hi User3 ctermfg=blue ctermbg=yellow cterm=None
-"hi User4 ctermfg=blue ctermbg=yellow cterm=None
-"hi User5 ctermfg=blue ctermbg=yellow cterm=None
 
+augroup plugin_initialize
+autocmd!
+    autocmd BufEnter * call LoadPluginSettings()
+augroup END
 
-
+function! LoadPluginSettings()
+    if exists(':NERDTree')
+        let g:NERDTreeIgnore = ['\.pyc$', '\.class$']
+        nnoremap <silent> <Leader><Leader>d :NERDTreeCWD<CR>
+    endif
+endfunction
 

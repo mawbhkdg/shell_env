@@ -98,4 +98,4 @@ fi
 export TMOUT=0
 
 alias pygrep="find . -name '*.py' | xargs grep --color -in "
-alias tailf="A=($(ls -t)) | echo ${A[1]} | xargs tail -f"
+alias tailf="echo $(ls -t) | awk '{print $1}'| xa    rgs tail -f"

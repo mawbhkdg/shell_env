@@ -52,8 +52,7 @@ set cuc " 将当前光标下的列高亮, cursorcolumn
 
 set nocompatible
 set tags=tags
-set tags+=/Users/Michael/workspace/data0/topweibo/php_tags
-set tags+=/Users/Michael/workspace/data0/topweibo/py_tags
+set tags+=~/works/mytags
 set et
 set encoding=utf-8
 set bs=2  "backspace

@@ -6,39 +6,41 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-"Plugin 'altercation/vim-colors-solarized'
-"Plugin 'bling/vim-airline'
-Plugin 'funorpain/vim-cpplint'
-Plugin 'gmarik/Vundle.vim'
-Plugin 'majutsushi/tagbar'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
-Plugin 'shougo/unite.vim'
-Plugin 'shougo/vimproc.vim'
-Plugin 'shougo/vimshell.vim'
-"A Git wrapper so awesome, it should be illegal
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-markdown'
-Plugin 'Markdown'
-Plugin 'Markdown-syntax'
-Plugin 'uarun/vim-protobuf'
-"Plugin 'Valloric/YouCompleteMe'
-"Inserts matching bracket, paren, brace or quote
-Plugin 'AutoClose'
-Bundle 'Lokaltog/vim-powerline'
-Plugin '_jsbeautify'
 "Autodetect multiple encodings
 Plugin 'FencView.vim'
 "Automatic syntax checking
 Plugin 'scrooloose/syntastic'
 "Extra highlighting of typedefs, enumerations etc (based on ctags)
 Plugin 'TagHighlight'
-"Fast file navigation for VIM
+"add & remove comments with \cc, \uc
 Plugin 'git://git.wincent.com/command-t.git'
 "Do all your insert-mode completion with Tab!
 Plugin 'SuperTab'
 Bundle 'tpope/vim-surround'
 Plugin 'https://github.com/terryma/vim-multiple-cursors.git'
+"Inserts matching bracket, paren, brace or quote
+Plugin 'AutoClose'
+Plugin 'gmarik/Vundle.vim'
+Plugin 'majutsushi/tagbar'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'shougo/unite.vim'
+"A Git wrapper so awesome, it should be illegal
+Plugin 'tpope/vim-fugitive'
+Bundle 'Lokaltog/vim-powerline'
+
+"Plugin 'Valloric/YouCompleteMe'
+"使用 vimshell + vimproc 优雅的在 Vim中完成各种CMD,终端操作
+"Plugin 'shougo/vimproc.vim'
+"Plugin 'shougo/vimshell.vim'
+"Plugin 'altercation/vim-colors-solarized'
+"Plugin 'bling/vim-airline'
+"Plugin 'funorpain/vim-cpplint'
+"Plugin 'tpope/vim-markdown'
+"Plugin 'Markdown'
+"Plugin 'Markdown-syntax'
+"Plugin 'uarun/vim-protobuf'
+"Plugin '_jsbeautify'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -84,7 +86,6 @@ endif
 
 if(!g:isGUI)
     set term=xterm-256color " gvim error, if without vim error
-
     "------------------------------
     "could be selected
     "colorscheme nazca
@@ -93,7 +94,6 @@ if(!g:isGUI)
     "colorscheme jellybeans
     "colorscheme badwolf
     "colorscheme ir_black
-
     "colorscheme leo
 
     "colorscheme herald
@@ -108,7 +108,6 @@ if(!g:isGUI)
     "colorscheme tchaba
     "colorscheme Monokai
     "colorscheme blacklight
-
     "------------------------------
     "color nice
     "colorscheme southernlights
@@ -129,7 +128,6 @@ if (g:isGUI)
     "colorscheme jellybeans
     "colorscheme badwolf
     "colorscheme ir_black
-
     "colorscheme leo
 
     "colorscheme herald
@@ -144,7 +142,6 @@ if (g:isGUI)
     "colorscheme tchaba
     "colorscheme Monokai
     "colorscheme blacklight
-
     "------------------------------
     "color nice
     "colorscheme southernlights

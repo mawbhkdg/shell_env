@@ -6,6 +6,7 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+Plugin 'gmarik/Vundle.vim'
 "Autodetect multiple encodings
 Plugin 'FencView.vim'
 "Automatic syntax checking
@@ -14,16 +15,12 @@ Plugin 'scrooloose/syntastic'
 Plugin 'TagHighlight'
 "Do all your insert-mode completion with Tab!
 Plugin 'SuperTab'
-Bundle 'tpope/vim-surround'
-Plugin 'vim-multiple-cursors.git'
 "Inserts matching bracket, paren, brace or quote
 Plugin 'AutoClose'
-Plugin 'gmarik/Vundle.vim'
 Plugin 'majutsushi/tagbar'
 "Comment functions so powerful—no comment necessary
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
-Plugin 'shougo/unite.vim'
 "A Git wrapper so awesome, it should be illegal
 Plugin 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-powerline'
@@ -31,6 +28,10 @@ Bundle 'Lokaltog/vim-powerline'
 Plugin 'Mark'
 
 "Plugin 'Valloric/YouCompleteMe'
+"search and display information from arbitrary sources like files, buffers, recently used files or registers
+"Plugin 'shougo/unite.vim'
+"Plugin 'vim-multiple-cursors.git'
+"Plugin 'surround.vim'
 "使用 vimshell + vimproc 优雅的在 Vim中完成各种CMD,终端操作
 "Plugin 'shougo/vimproc.vim'
 "Plugin 'shougo/vimshell.vim'

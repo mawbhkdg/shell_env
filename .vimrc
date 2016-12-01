@@ -12,16 +12,15 @@ Plugin 'FencView.vim'
 Plugin 'scrooloose/syntastic'
 "Extra highlighting of typedefs, enumerations etc (based on ctags)
 Plugin 'TagHighlight'
-"add & remove comments with \cc, \uc
-Plugin 'git://git.wincent.com/command-t.git'
 "Do all your insert-mode completion with Tab!
 Plugin 'SuperTab'
 Bundle 'tpope/vim-surround'
-Plugin 'https://github.com/terryma/vim-multiple-cursors.git'
+Plugin 'vim-multiple-cursors.git'
 "Inserts matching bracket, paren, brace or quote
 Plugin 'AutoClose'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'majutsushi/tagbar'
+"Comment functions so powerful—no comment necessary
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'shougo/unite.vim'
@@ -35,14 +34,9 @@ Plugin 'Mark'
 "使用 vimshell + vimproc 优雅的在 Vim中完成各种CMD,终端操作
 "Plugin 'shougo/vimproc.vim'
 "Plugin 'shougo/vimshell.vim'
-"Plugin 'altercation/vim-colors-solarized'
 "Plugin 'bling/vim-airline'
 "Plugin 'funorpain/vim-cpplint'
-"Plugin 'tpope/vim-markdown'
-"Plugin 'Markdown'
-"Plugin 'Markdown-syntax'
 "Plugin 'uarun/vim-protobuf'
-"Plugin '_jsbeautify'
 
 call vundle#end()            " required
 filetype plugin indent on    " required

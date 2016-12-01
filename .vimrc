@@ -28,6 +28,8 @@ Plugin 'shougo/unite.vim'
 "A Git wrapper so awesome, it should be illegal
 Plugin 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-powerline'
+"highlight several words in different colors simultaneously
+Plugin 'Mark'
 
 "Plugin 'Valloric/YouCompleteMe'
 "使用 vimshell + vimproc 优雅的在 Vim中完成各种CMD,终端操作

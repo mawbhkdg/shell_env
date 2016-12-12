@@ -30,7 +30,8 @@ Plugin 'Mark'
 "Plugin 'Valloric/YouCompleteMe'
 "search and display information from arbitrary sources like files, buffers, recently used files or registers
 "Plugin 'shougo/unite.vim'
-"Plugin 'vim-multiple-cursors.git'
+"Plugin 'https://github.com/terryma/vim-multiple-cursors.git'
+"Plugin 'vim-multiple-cursors.git' " F8~F10 remapped
 "Plugin 'surround.vim'
 "使用 vimshell + vimproc 优雅的在 Vim中完成各种CMD,终端操作
 "Plugin 'shougo/vimproc.vim'

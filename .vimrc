@@ -3,6 +3,7 @@ set nocompatible              " be iMproved, required
 
 filetype off                  " required
 " set the runtime path to include Vundle and initialize
+" vim start with target .vimrc: vim -u /XXXX/XXXX/XXXX/.vimrc
 set rtp+=~/.vim/bundle/Vundle.vim
 "set rtp+=/XXXX/XXXX/.vim/bundle/Vundle.vim
 "set rtp+=/XXXX/XXXX/.vim

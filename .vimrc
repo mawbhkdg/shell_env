@@ -8,6 +8,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 "set rtp+=/XXXX/XXXX/.vim/bundle/Vundle.vim
 "set rtp+=/XXXX/XXXX/.vim
 call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+call vundle#begin('/data7/wenbin9/.vim/bundle')
 
 Plugin 'gmarik/Vundle.vim'
 "Autodetect multiple encodings

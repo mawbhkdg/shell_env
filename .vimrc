@@ -31,18 +31,20 @@ Plugin 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-powerline'
 "highlight several words in different colors simultaneously
 Plugin 'Mark'
+"使用 vimshell + vimproc 优雅的在 Vim中完成各种CMD,终端操作
+"vimproc 需要编译
+"Plugin 'shougo/vimproc.vim'
+"Plugin 'shougo/vimshell.vim'
 
 "another automatically completions
 "Plugin 'AutoComplPop'
+"需要编译
 "Plugin 'Valloric/YouCompleteMe'
 "search and display information from arbitrary sources like files, buffers, recently used files or registers
 "Plugin 'shougo/unite.vim'
 "Plugin 'https://github.com/terryma/vim-multiple-cursors.git'
 "Plugin 'vim-multiple-cursors.git' " F8~F10 remapped
 "Plugin 'surround.vim'
-"使用 vimshell + vimproc 优雅的在 Vim中完成各种CMD,终端操作
-"Plugin 'shougo/vimproc.vim'
-"Plugin 'shougo/vimshell.vim'
 "Plugin 'bling/vim-airline'
 "Plugin 'funorpain/vim-cpplint'
 "Plugin 'uarun/vim-protobuf'
@@ -187,7 +189,8 @@ set autoread " 当文件在外部被修改，自动更新该文件
 set laststatus=2 " 总是显示状态栏"
 let g:Powerline_symbols = 'fancy' " 'unicode'
 
-nmap <F7> :make<CR>:copen<CR><C-W><C-P>
+nmap <F7> :VimShellPop -toggle<CR>
+"nmap <F7> :make<CR>:copen<CR><C-W><C-P>
 "nmap <F8> :call Cpplint()<CR>
 nmap <F3> :Unite -start-insert file_rec/async:!<CR>
 nmap gd :YcmCompleter GoTo<CR>

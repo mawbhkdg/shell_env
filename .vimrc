@@ -32,6 +32,8 @@ Bundle 'Lokaltog/vim-powerline'
 "highlight several words in different colors simultaneously
 Plugin 'Mark'
 
+"another automatically completions
+"Plugin 'AutoComplPop'
 "Plugin 'Valloric/YouCompleteMe'
 "search and display information from arbitrary sources like files, buffers, recently used files or registers
 "Plugin 'shougo/unite.vim'

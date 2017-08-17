@@ -28,13 +28,15 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 "A Git wrapper so awesome, it should be illegal
 Plugin 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-powerline'
 "highlight several words in different colors simultaneously
 Plugin 'Mark'
 "使用 vimshell + vimproc 优雅的在 Vim中完成各种CMD,终端操作
 "vimproc 需要编译
 "Plugin 'shougo/vimproc.vim'
 "Plugin 'shougo/vimshell.vim'
+Plugin 'vim-airline', {'name': 'airline_new'}
+Plugin 'vim-airline/vim-airline-themes'
+"Bundle 'Lokaltog/vim-powerline'
 
 "another automatically completions
 "Plugin 'AutoComplPop'
@@ -45,7 +47,6 @@ Plugin 'Mark'
 "Plugin 'https://github.com/terryma/vim-multiple-cursors.git'
 "Plugin 'vim-multiple-cursors.git' " F8~F10 remapped
 "Plugin 'surround.vim'
-"Plugin 'bling/vim-airline'
 "Plugin 'funorpain/vim-cpplint'
 "Plugin 'uarun/vim-protobuf'
 
@@ -65,10 +66,7 @@ set tags+=~/works/mytags
 set et
 set encoding=utf-8
 set bs=2  "backspace
-let g:airline#extensions#branch#enabled = 1
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
-let g:airline_theme = 'powerlineish'
+
 let g:vimshell_prompt = 'vimshell $ '
 let g:ycm_confirm_extra_conf = 0
 
@@ -81,6 +79,79 @@ set bg=dark " background
 " 设置语法高亮
 syntax enable
 syntax on
+
+let g:airline#extensions#branch#enabled = 1
+"--------------------------------------------------------------------------
+"vim-airline
+"--------------------------------------------------------------------------
+Plugin 'vim-airline'
+"let g:airline_theme = 'powerlineish'
+"let g:airline_theme = 'molokai'
+"let g:airline_theme = 'luna'
+
+"这个是安装字体后 必须设置此项"
+let g:airline_powerline_fonts = 1
+
+"打开tabline功能,方便查看Buffer和切换,省去了minibufexpl插件
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+
+"设置切换Buffer快捷键"
+nnoremap <C-tab> :bn<CR>
+nnoremap <C-s-tab> :bp<CR>
+
+" 关闭状态显示空白符号计数
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#whitespace#symbol = '!'
+
+" 设置consolas字体"前面已经设置过
+"set guifont=Consolas\ for\ Powerline\ FixedD:h11
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+" old vim-powerline symbols
+let g:airline_left_sep = '⮀'
+let g:airline_left_alt_sep = '⮁'
+let g:airline_right_sep = '⮂'
+let g:airline_right_alt_sep = '⮃'
+let g:airline_symbols.branch = '⭠'
+let g:airline_symbols.readonly = '⭤'
+
+" unicode symbols
+"let g:airline_left_sep = '»'
+"let g:airline_left_sep = '▶'
+"let g:airline_right_sep = '«'
+"let g:airline_right_sep = '◀'
+"let g:airline_symbols.linenr = '␊'
+"let g:airline_symbols.linenr = '␤'
+"let g:airline_symbols.linenr = '¶'
+"let g:airline_symbols.branch = '⎇'
+"let g:airline_symbols.paste = 'ρ'
+"let g:airline_symbols.paste = 'Þ'
+"let g:airline_symbols.paste = '∥'
+"let g:airline_symbols.whitespace = 'Ξ'
+
+"----------------------------------------------------------------
+"编码设置
+"----------------------------------------------------------------
+"Vim 在与屏幕/键盘交互时使用的编码(取决于实际的终端的设定)
+set encoding=utf-8
+set langmenu=zh_CN.UTF-8
+" 设置打开文件的编码格式
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+set fileencoding=utf-8
+"解决菜单乱码
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
+"解决consle输出乱码(win)
+"set termencoding = cp936
+"设置中文提示
+language messages zh_CN.utf-8
+"设置中文帮助
+set helplang=cn
+"设置为双字宽显示，否则无法完整显示如:☆
+set ambiwidth=double
 
 " -----------------------------------------------------------------------------
 "  < 判断是终端还是 Gvim >

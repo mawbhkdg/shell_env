@@ -96,6 +96,10 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 
+" neovim python provider
+let g:python_host_prog  = '/usr/bin/python'
+"let g:loaded_python_provider=1
+
 "设置切换Buffer快捷键"
 nnoremap <C-tab> :bn<CR>
 nnoremap <C-s-tab> :bp<CR>
@@ -163,22 +167,30 @@ else
 endif
 
 if(!g:isGUI)
-    set term=xterm-256color " gvim error, if without vim error
+    if !has('nvim')
+        set term=xterm-256color " gvim error, if without vim error
+    endif
     "------------------------------
     "could be selected
     "colorscheme nazca
     "colorscheme smyck
     "colorscheme thor
-    "colorscheme jellybeans
     "colorscheme badwolf
-    "colorscheme ir_black
     "colorscheme leo
 
+    "colorscheme peaksea
+    "colorscheme zenburn
+    "colorscheme lilypink
+    "colorscheme ir_dark
+    "colorscheme molokai
     "colorscheme herald
     "colorscheme kolor
+    "colorscheme jellybeans
+
     colorscheme lilydjwg_dark
-    "colorscheme lilypink
-    "colorscheme molokai
+    "colorscheme Monokai
+    "colorscheme solarized
+    "colorscheme twilight256
     "------------------------------
     "bg gray
     "colorscheme obsidian
@@ -210,7 +222,13 @@ if (g:isGUI)
 
     "colorscheme herald
     "colorscheme kolor
-    colorscheme lilydjwg_dark
+
+    "colorscheme lilydjwg_dark
+
+    "colorscheme lucius
+    "LuciusBlack
+    "LuciusLight
+
     "colorscheme lilypink
     "colorscheme molokai
     "------------------------------
@@ -227,8 +245,9 @@ if (g:isGUI)
     "colorscheme vividchalk
     "colorscheme inkpot
     "colorscheme ingretu
-    " colorscheme solarized
-    set guifont=Monaco\ for\ Powerline:h16
+    "colorscheme solarized
+
+    set guifont=Monaco\ for\ Powerline:h18
     set lines=30 columns=100
     set mouse=a
     let s:lines=&lines
@@ -239,12 +258,12 @@ if (g:isGUI)
     set guioptions-=T
     set guioptions+=e
 
-    set transparency=30      " 透明背景"
+    set transparency=5      " 透明背景"
     set showtabline=2        " 开启自带的tab栏"
 
     hi cursorline guibg=#222222
     hi CursorColumn guibg=#333333
-    
+
     map <silent> <F2> :if &guioptions =~# 'T' <Bar>
     \set guioptions-=T <Bar>
     \set guioptions-=m <bar>
@@ -258,10 +277,12 @@ endif
 set autoread " 当文件在外部被修改，自动更新该文件
 
 set laststatus=2 " 总是显示状态栏"
-let g:Powerline_symbols = 'fancy' " 'unicode'
 
-nmap <F7> :VimShellPop -toggle<CR>
+" for powerline
+"let g:Powerline_symbols = 'fancy' " 'unicode'
+
 "nmap <F7> :make<CR>:copen<CR><C-W><C-P>
+nmap <F7> :VimShellPop -toggle<CR>
 "nmap <F8> :call Cpplint()<CR>
 nmap <F3> :Unite -start-insert file_rec/async:!<CR>
 nmap gd :YcmCompleter GoTo<CR>
@@ -306,10 +327,10 @@ autocmd BufReadPost *
     set ignorecase
     set smartcase
 
-    " enable magic matching  
-    set magic  
-       
-    " show matching bracets  
+    " enable magic matching
+    set magic
+
+    " show matching bracets
     set showmatch
 
     " 搜索逐字符高亮
@@ -330,10 +351,10 @@ autocmd BufReadPost *
 
         " 将Tab键更改为空格
         set expandtab
-        
+
         " 编辑模式的时候按退格键的时候退回缩进的长度,当使用 expandtab 时特别有用
         set softtabstop=4
-        
+
         " 显示tab和空格
         set list
         " 设置tab和空格样式
@@ -350,6 +371,14 @@ autocmd BufReadPost *
 "let g:multi_cursor_skip_key='<C-x>'
 "let g:multi_cursor_quit_key='<Esc>'
 
+" youcompleteme for python path
+"let g:ycm_python_binary_path = '/usr/bin/python'
+"let g:ycm_server_python_interpreter = '/usr/bin/python'
+"let g:syntastic_python_python_exec = '/usr/bin/python'
+
+"let g:ycm_python_binary_path = '/Users/wenbin9/anaconda/bin/python'
+"let g:ycm_server_python_interpreter = '/Users/wenbin9/anaconda/bin/python'
+"let g:syntastic_python_python_exec = '/Users/wenbin9/anaconda/bin/python'
 
 augroup plugin_initialize
 autocmd!
@@ -363,3 +392,10 @@ function! LoadPluginSettings()
     endif
 endfunction
 
+if has("autocmd")
+    " Highlight TODO, FIXME, NOTE, etc.
+    if v:version > 701
+        autocmd Syntax * call matchadd('Todo', '\W\zs\(TODO\|FIXME\|CHANGED\|BUG\|HACK\)')
+        autocmd Syntax * call matchadd('Debug', '\W\zs\(NOTE\|INFO\|IDEA\)')
+    endif
+endif

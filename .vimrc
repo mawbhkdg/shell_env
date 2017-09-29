@@ -44,8 +44,7 @@ Plugin 'vim-airline/vim-airline-themes'
 "Plugin 'Valloric/YouCompleteMe'
 "search and display information from arbitrary sources like files, buffers, recently used files or registers
 "Plugin 'shougo/unite.vim'
-"Plugin 'https://github.com/terryma/vim-multiple-cursors.git'
-"Plugin 'vim-multiple-cursors.git' " F8~F10 remapped
+"Plugin 'vim-multiple-cursors' " F8~F10 remapped
 "Plugin 'surround.vim'
 "Plugin 'funorpain/vim-cpplint'
 "Plugin 'uarun/vim-protobuf'

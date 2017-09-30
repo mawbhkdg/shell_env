@@ -36,6 +36,7 @@ Plugin 'Mark'
 "Plugin 'shougo/vimshell.vim'
 Plugin 'vim-airline', {'name': 'airline_new'}
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'terryma/vim-multiple-cursors'
 "Bundle 'Lokaltog/vim-powerline'
 
 "another automatically completions
@@ -44,7 +45,7 @@ Plugin 'vim-airline/vim-airline-themes'
 "Plugin 'Valloric/YouCompleteMe'
 "search and display information from arbitrary sources like files, buffers, recently used files or registers
 "Plugin 'shougo/unite.vim'
-"Plugin 'vim-multiple-cursors' " F8~F10 remapped
+"Plugin 'vim-multiple-cursors' " Error: Fn (1~10) remapped
 "Plugin 'surround.vim'
 "Plugin 'funorpain/vim-cpplint'
 "Plugin 'uarun/vim-protobuf'

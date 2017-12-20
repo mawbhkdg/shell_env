@@ -1,0 +1,51 @@
+# Created by newuser for 5.4.1
+
+#color{{{
+autoload colors
+colors
+for color in RED GREEN YELLOW BLUE MAGENTA CYAN WHITE; do
+|   eval _$color='%{$terminfo[bold]$fg[${(L)color}]%}'
+|   eval $color='%{$fg[${(L)color}]%}'
+|   (( count = $count + 1 ))
+done
+FINISH="%{$terminfo[sgr0]%}"
+#}}}
+
+PROMPT=$(echo "$CYAN%n@${YELLOW}234:$GREEN%/${BLUE}[$RED%D{%H:%M:%S}${BLUE}]$_YELLOW>$FINISH ")
+
+#{{{
+case $TERM in (*xterm*|*rxvt*|(dt|k|E)term)
+precmd () { print -Pn "\e]0;%n@%M//%/\a" }
+preexec () { print -Pn "\e]0;%n@%M//%/\ $1\a" }
+;;
+esac
+##}}}
+
+export HISTSIZE=10000
+setopt INC_APPEND_HISTORY
+setopt EXTENDED_HISTORY
+
+setopt AUTO_CD
+setopt AUTO_LIST
+setopt AUTO_MENU
+
+autoload -U compinit
+compinit
+
+zstyle ':completion:*' expand 'yes'
+zstyle ':completion:*' squeeze-shlashes 'yes'
+zstyle ':completion::complete:*' '\\'
+
+eval $(dircolors -b)
+export ZLSCOLORS="${LS_COLORS}"
+zmodload zsh/complist
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
+
+unset SSH_ASKPASS
+
+alias ls='ls -F --color=auto'
+alias ll='ls -al'
+alias la='ls -a'
+alias grep='grep --color=auto'
+alias vim='vim -u /XXX/.vimrc '

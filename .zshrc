@@ -53,7 +53,7 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/opt/rh/devtoolset-2/root/usr/bin:/usr/lib64/qt-3.3/bin:/usr/kerberos/sbin:/usr/kerberos/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/java/jdk1.7.0_51/bin:/usr/java/jdk1.7.0_51/jre/bin::/opt/dell/srvadmin/bin:/home/mwb/bin:/usr/java/jdk1.7.0_51/bin:/usr/java/jdk1.7.0_51/jre/bin:"
+export PATH="/opt/rh/devtoolset-2/root/usr/bin:/usr/lib64/qt-3.3/bin:/usr/kerberos/sbin:/usr/kerberos/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/java/jdk1.7.0_51/bin:/usr/java/jdk1.7.0_51/jre/bin::/opt/dell/srvadmin/bin:/usr/java/jdk1.7.0_51/bin:/usr/java/jdk1.7.0_51/jre/bin:"
 # export MANPATH="/usr/local/man:$MANPATH"
 export PATH=$PATH:~/bin
 

@@ -376,9 +376,9 @@ autocmd BufReadPost *
 "let g:ycm_server_python_interpreter = '/usr/bin/python'
 "let g:syntastic_python_python_exec = '/usr/bin/python'
 
-"let g:ycm_python_binary_path = '/Users/wenbin9/anaconda/bin/python'
-"let g:ycm_server_python_interpreter = '/Users/wenbin9/anaconda/bin/python'
-"let g:syntastic_python_python_exec = '/Users/wenbin9/anaconda/bin/python'
+"let g:ycm_python_binary_path = '/XXX/anaconda/bin/python'
+"let g:ycm_server_python_interpreter = '/XXX/anaconda/bin/python'
+"let g:syntastic_python_python_exec = '/XXX/anaconda/bin/python'
 
 augroup plugin_initialize
 autocmd!
